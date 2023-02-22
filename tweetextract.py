@@ -88,18 +88,6 @@ def check_deal_from_tweet(tweet: str, api_key: str) -> bool:
 
   return dealTF # return the boolean variable requested by the instructions that indicates whether a deal was detected
 
-"""## Step 5
-Put everything together in the following code block. The final output should be a list of dict that contains fields like this:   
-```
-[{
-  'handle': 'user name',
-  'tweet': 'tweet content',
-  'tweet_id': 'id',
-  'hasDeal': True/False
-}]
-```
-"""
-
 import json
 
 handle = 'RedFlagDeals' # you can use any handle for testing here
@@ -126,8 +114,3 @@ for tweet in tweet_array:
 #output = '\n'.join(str(twt) for twt in output)
 
 print(json.dumps(output, indent = 1, separators=(',', ': ')))
-
-"""## Bonuses
-1. Almost all the public api has rate limit, openai and twitter also not an exception. Rate limit the two functions you just implemented, so that your api key not get banned. 
-2. Use python [typing hint](https://docs.python.org/3/library/typing.html)
-"""
